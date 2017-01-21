@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KillController : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,8 +15,11 @@ public class KillController : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
-        print("destroyed");
+        SpriteRenderer renderer = other.GetComponent<SpriteRenderer>();
+        renderer.color = new Color(0.5f, 0.5f, 0.5f, .5f); // Set to opaque gray
+
+        PlayerController controller = other.GetComponent<PlayerController>();
+        controller.PlayDethScene();
     }
 
 }
