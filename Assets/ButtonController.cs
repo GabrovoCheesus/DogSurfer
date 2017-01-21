@@ -25,4 +25,14 @@ public class ButtonController : MonoBehaviour {
         PlayerPrefs.SetString("Username", inputField.text);
         SceneManager.LoadScene("MainScene");
     }
+
+    public void OnBack()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void OnEnd()
+    {
+        Application.Quit();
+    }
 }

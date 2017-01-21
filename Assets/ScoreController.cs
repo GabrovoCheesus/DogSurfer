@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,7 +27,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController.isAlive)
+        if (playerController.isAlive && !playerController.hasWon)
         {
             if (count % 10 == 0)
             {
@@ -44,7 +45,10 @@ public class ScoreController : MonoBehaviour
 
             SaveHighScore(username, currScore);
 
-            SceneManager.LoadScene("Menu");
+            PlayerPrefs.SetString("Score", currScore.ToString());
+            PlayerPrefs.SetString("IsWon", playerController.hasWon.ToString());
+
+            SceneManager.LoadScene("EndScene");
         }
     }
 
@@ -112,7 +116,7 @@ public class ScoreController : MonoBehaviour
             StreamWriter writer = new StreamWriter(fs);
             writer.AutoFlush = true;
 
-            foreach (var person in persons)
+            foreach (var person in persons.Take(10))
             {
                 writer.WriteLine(string.Format("{0} {1}", person.Name, person.Score));
             }
