@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -67,6 +70,9 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -75,11 +81,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonController.cs" />
     <Compile Include="Assets\CammeraFollowerController.cs" />
     <Compile Include="Assets\GifMover.cs" />
+    <Compile Include="Assets\HighScoreController.cs" />
     <Compile Include="Assets\JumpEnablerController.cs" />
     <Compile Include="Assets\KillController.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\RampSpawnerController.cs" />
     <Compile Include="Assets\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\WiggleController.cs" />

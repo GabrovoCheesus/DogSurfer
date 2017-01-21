@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
+    public bool hasWon = false;
 
     public ParticleSystem dust;
 
