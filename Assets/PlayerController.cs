@@ -6,7 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     public float thrust;
     public Rigidbody2D rb;
+
     public float forwardThrust = 1;
+    public float a = 1;
+    public float b = 1;
+
+    public float maxVelocity = 5;
 
     // Use this for initialization
     public void Start()
@@ -26,6 +31,9 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(transform.up * thrust);
         }
 
-        rb.AddForce(new Vector2(forwardThrust, 1) * forwardThrust);
+        rb.AddForce(new Vector2(a, b) * forwardThrust);
+        var vel = rb.velocity.normalized;
+
+        rb.velocity = vel * maxVelocity;
     }
 }
