@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool isAlive = true;
+
     public ParticleSystem dust;
 
     public float thrust;
@@ -53,5 +55,7 @@ public class PlayerController : MonoBehaviour
         currentMaxVelocity = minVelocity;
 
         Destroy(player, drownDuration);
+
+        isAlive = false;
     }
 }
