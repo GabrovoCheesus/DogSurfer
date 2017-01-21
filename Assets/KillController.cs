@@ -15,10 +15,16 @@ public class KillController : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D other)
     {
+        PlayerController controller = other.GetComponent<PlayerController>();
+        if (controller == null)
+            return;
+
         SpriteRenderer renderer = other.GetComponent<SpriteRenderer>();
+        if (renderer == null)
+            return;
+
         renderer.color = new Color(0.5f, 0.5f, 0.5f, .5f); // Set to opaque gray
 
-        PlayerController controller = other.GetComponent<PlayerController>();
         controller.PlayDethScene();
     }
 

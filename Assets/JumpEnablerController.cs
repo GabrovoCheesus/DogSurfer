@@ -19,12 +19,18 @@ public class JumpEnablerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         playerController = other.GetComponent<PlayerController>();
+        if (playerController == null)
+            return;
+
         playerController.CanJump = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         playerController = other.GetComponent<PlayerController>();
+        if (playerController == null)
+            return;
+
         playerController.CanJump = false;
     }
 
