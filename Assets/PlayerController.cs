@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
@@ -47,9 +48,9 @@ public class PlayerController : MonoBehaviour
         {
             if (CanJump)
             {
-                print("space key was pressed");
-                if (rb == null)
-                    print("no ewrw");
+                AudioSource audio = GetComponent<AudioSource>();
+                audio.Play();
+                audio.Play(44100);
 
                 rb.AddForce(transform.up * thrust);
             }
