@@ -75,11 +75,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonController.cs" />
     <Compile Include="Assets\CammeraFollowerController.cs" />
+    <Compile Include="Assets\EndTextController.cs" />
+    <Compile Include="Assets\FinishController.cs" />
     <Compile Include="Assets\GifMover.cs" />
+    <Compile Include="Assets\HighScoreController.cs" />
     <Compile Include="Assets\JumpEnablerController.cs" />
     <Compile Include="Assets\KillController.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\RampSpawnerController.cs" />
     <Compile Include="Assets\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\WiggleController.cs" />

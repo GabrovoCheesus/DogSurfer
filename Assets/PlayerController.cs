@@ -6,20 +6,27 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
+    public bool hasWon = false;
 
     public ParticleSystem dust;
+
+    public GameObject surf;
 
     public float thrust;
     public Rigidbody2D rb;
 
     public float forwardThrust = 1;
+
+
     public float a = 1;
     public float b = 1;
 
     public float currentMaxVelocity = 5;
     public float minVelocity = 2;
+    public float winVelocity = 1;
 
     public float drownDuration = 2.0f;
+    public float finishDuration = 1.0f;
 
     public float speed = 100;
 
@@ -27,7 +34,6 @@ public class PlayerController : MonoBehaviour
 
     public bool CanJump { get; internal set; }
 
-    // Use this for initialization
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,7 +41,6 @@ public class PlayerController : MonoBehaviour
         dust.Stop();
     }
 
-    // Update is called once per frame
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -53,16 +58,48 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(new Vector2(a, b) * forwardThrust * Time.deltaTime * speed);
         var vel = rb.velocity.normalized;
 
-        rb.velocity = vel * currentMaxVelocity ;
+        rb.velocity = vel * currentMaxVelocity;
     }
 
     internal void PlayDethScene()
     {
+        StartCoroutine(DethCoroutine());
+    }
+
+    private IEnumerator DethCoroutine()
+    {
         dust.Play();
         currentMaxVelocity = minVelocity;
 
-        Destroy(player, drownDuration);
+        yield return new WaitForSeconds((int)drownDuration);
 
+        Destroy(player);
         isAlive = false;
+    }
+
+    private IEnumerator WinCoroutine()
+    {
+        currentMaxVelocity = winVelocity;
+        ThrowSurf();
+
+        yield return new WaitForSeconds((int)finishDuration);
+        
+        hasWon = true;
+     }
+
+    internal void Win()
+    {
+        StartCoroutine(WinCoroutine());
+    }
+
+    public void ThrowSurf()
+    {
+        surf.transform.parent = null;
+
+        surf.AddComponent<Rigidbody2D>();
+
+        var rb = surf.GetComponent<Rigidbody2D>();
+
+        rb.AddForce(Vector2.up * 100);
     }
 }
