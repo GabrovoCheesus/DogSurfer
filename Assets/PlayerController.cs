@@ -59,6 +59,9 @@ public class PlayerController : MonoBehaviour
         var vel = rb.velocity.normalized;
 
         rb.velocity = vel * currentMaxVelocity;
+
+        if(rb.velocity == new Vector2(0,0))
+            rb.velocity = vel * 2* currentMaxVelocity;
     }
 
     internal void PlayDethScene()

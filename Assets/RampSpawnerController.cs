@@ -2,7 +2,8 @@
 
 public class RampSpawnerController : MonoBehaviour
 {
-    public int rampCount = 3;
+    public int minRampCount = 100;
+    public int maxRampCount = 200;
 
     public GameObject[] ramps;
     
@@ -11,8 +12,10 @@ public class RampSpawnerController : MonoBehaviour
 
     public void Start()
     {
+        var count = Random.Range(minRampCount, maxRampCount);
+
         Vector3 lastPossition;
-        for (int i = 1; i <= rampCount; i++)
+        for (int i = 1; i <= count; i++)
         {
             int index = Random.Range(0, ramps.Length);
             lastPossition = rampPrototype.transform.FindChild("End").transform.position;
