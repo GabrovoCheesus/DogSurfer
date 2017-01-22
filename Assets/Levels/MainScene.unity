@@ -113,13 +113,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84174611}
-  m_LocalRotation: {x: 0, y: -0, z: -0.10009161, w: 0.99497825}
-  m_LocalPosition: {x: 0.23664355, y: -1.9742484, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: 0.021673068, w: 0.99976516}
+  m_LocalPosition: {x: 0.4, y: -2.32, z: 2}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1163525931}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.4840002}
 --- !u!212 &84174613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 412d442ea2518434483282586cc99456, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c376457af1e05774bbd5eabdefe2cd26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a4b4511eb2fa42913fd34ebfbc6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rampCount: 50
+  rampCount: 5
   ramps:
   - {fileID: 1196810812358260, guid: bbdd1190c6984b54eaa758396f34f1ad, type: 2}
   - {fileID: 1435254056239474, guid: c9175604662cce24aaa4a8ac9ac1130b, type: 2}
@@ -381,7 +381,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1364947855
+  randomSeed: -427916281
   InitialModule:
     serializedVersion: 3
     enabled: 1
