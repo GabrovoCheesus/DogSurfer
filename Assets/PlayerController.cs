@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
             {
                 AudioSource audio = GetComponent<AudioSource>();
                 audio.Play();
-                audio.Play(44100);
 
                 rb.AddForce(transform.up * thrust);
             }
@@ -62,7 +61,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = vel * currentMaxVelocity;
 
         if(rb.velocity == new Vector2(0,0))
-            rb.velocity = vel * 2* currentMaxVelocity;
+            rb.velocity = vel * 4 * currentMaxVelocity;
     }
 
     internal void PlayDethScene()

@@ -928,7 +928,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &60110322425002410
 PolygonCollider2D:
@@ -963,7 +963,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.45999998, y: 0.72999996}
+    - - {x: 0.8897414, y: 0.4169464}
+      - {x: 0.45999998, y: 0.72999996}
       - {x: 0.16, y: 0.87}
       - {x: 0.02, y: 0.91999996}
       - {x: -0.12, y: 0.96}
@@ -976,8 +977,9 @@ PolygonCollider2D:
       - {x: -0.84, y: 0.56}
       - {x: -0.57, y: 0.62}
       - {x: -0.37, y: 0.62}
-      - {x: 0.9832349, y: -0.11144519}
-      - {x: 1.0000005, y: 0.3829856}
+      - {x: 0.65818167, y: -0.1894989}
+      - {x: 1.8356719, y: -0.60092163}
+      - {x: 1.7689662, y: 0.23150635}
 --- !u!60 &60382901556686510
 PolygonCollider2D:
   m_ObjectHideFlags: 1
