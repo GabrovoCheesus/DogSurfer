@@ -22,7 +22,12 @@ public class ButtonController : MonoBehaviour {
 
     public void OnClick()
     {
-        PlayerPrefs.SetString("Username", inputField.text);
+        string name = inputField.text.Trim();
+
+        if (string.IsNullOrEmpty(name))
+            name = "Unknown";
+
+        PlayerPrefs.SetString("Username", name);
         SceneManager.LoadScene("MainScene");
     }
 
