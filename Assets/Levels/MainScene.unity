@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a4b4511eb2fa42913fd34ebfbc6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rampCount: 12
+  rampCount: 50
   ramps:
   - {fileID: 1196810812358260, guid: bbdd1190c6984b54eaa758396f34f1ad, type: 2}
   - {fileID: 1435254056239474, guid: c9175604662cce24aaa4a8ac9ac1130b, type: 2}
