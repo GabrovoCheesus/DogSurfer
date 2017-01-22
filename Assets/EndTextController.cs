@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndTextController : MonoBehaviour {
@@ -32,6 +33,9 @@ public class EndTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
 }

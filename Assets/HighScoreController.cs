@@ -5,9 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HighScoreController : MonoBehaviour
 {
+    public InputField inputField;
 
     // Use this for initialization
     void Start()
@@ -19,7 +21,16 @@ public class HighScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("space"))
+        {
+            string name = inputField.text.Trim();
 
+            if (string.IsNullOrEmpty(name))
+                name = "Unknown";
+
+            PlayerPrefs.SetString("Username", name);
+            SceneManager.LoadScene("MainScene");
+        }
     }
 
     string LoadText()
