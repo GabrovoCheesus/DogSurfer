@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4896426973017386}
   - component: {fileID: 212153446107349358}
+  - component: {fileID: 95063838563283242}
   m_Layer: 0
   m_Name: kitty
   m_TagString: Untagged
@@ -130,6 +131,23 @@ BoxCollider2D:
   m_Offset: {x: 10.141861, y: 0.1878128}
   serializedVersion: 2
   m_Size: {x: 20.425182, y: 1.8049088}
+--- !u!95 &95063838563283242
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355167435257282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 625ad329d1e743d4786241340fa3759b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114111763541051096
 MonoBehaviour:
   m_ObjectHideFlags: 1
