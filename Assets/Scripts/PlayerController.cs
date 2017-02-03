@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
+    private bool canMove = true;
+
     public bool isAlive = true;
     public bool hasWon = false;
 
@@ -44,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        if (!canMove)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (CanJump)
@@ -97,6 +102,8 @@ public class PlayerController : MonoBehaviour
 
     public void ThrowSurf()
     {
+        canMove = false;
+
         surf.transform.parent = null;
 
         surf.AddComponent<Rigidbody2D>();
