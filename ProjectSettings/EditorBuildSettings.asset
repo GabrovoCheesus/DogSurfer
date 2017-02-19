@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Menu.unity
   - enabled: 1
+    path: Assets/Levels/SplashScreen.unity
+  - enabled: 1
     path: Assets/Levels/MainScene.unity
   - enabled: 1
     path: Assets/Levels/EndScene.unity
