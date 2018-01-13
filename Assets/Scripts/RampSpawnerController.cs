@@ -18,7 +18,7 @@ public class RampSpawnerController : MonoBehaviour
         for (int i = 1; i <= count; i++)
         {
             int index = Random.Range(0, ramps.Length);
-            lastPossition = rampPrototype.transform.FindChild("End").transform.position;
+            lastPossition = rampPrototype.transform.Find("End").transform.position;
 
             var ramp = Instantiate(ramps[index]);
             ramp.transform.position = lastPossition;
@@ -30,7 +30,7 @@ public class RampSpawnerController : MonoBehaviour
 
         var finishRamp = Instantiate(finish);
 
-        lastPossition = rampPrototype.transform.FindChild("End").transform.position;
+        lastPossition = rampPrototype.transform.Find("End").transform.position;
         finishRamp.transform.position = lastPossition;
     }
 }
